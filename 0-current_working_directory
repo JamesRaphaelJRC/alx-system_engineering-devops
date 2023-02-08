@@ -1,0 +1,3 @@
+#!/bin/bash
+#This command prints the Present Working Directory
+echo $PWD
