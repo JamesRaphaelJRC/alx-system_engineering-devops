@@ -7,10 +7,10 @@ total 56
 -rwxr--r-- 1 root root   29 Feb 13 06:15 5-firstlines
 -rwxr--r-- 1 root root   40 Feb 13 06:48 6-third_line
 -rwxr--r-- 1 root root   83 Feb 13 08:12 7-file
--rwxr--r-- 1 root root   35 Feb 13 08:20 8-cwd_state
+-rwxr--r-- 1 root root   37 Feb 13 08:23 8-cwd_state
 -rw-r--r-- 1 root root    0 Feb 13 08:09 \*\\\'"Best School"\'\\\*$\\?\\*\\*\\*\\*\\*\:\)
 -rw-r--r-- 1 root root 4364 Feb 13 06:00 cat
 -rwxr--r-- 1 root root  134 Feb 13 04:59 gitrobort.sh
 -rw-r--r-- 1 root root  432 Feb 13 06:34 iacta
--rw-r--r-- 1 root root    0 Feb 13 08:20 ls_cwd_content
+-rw-r--r-- 1 root root    0 Feb 13 08:23 ls_cwd_content
 -rw-r--r-- 1 root root   67 Feb 13 04:47 README.md
