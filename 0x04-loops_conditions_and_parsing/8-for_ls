@@ -11,6 +11,8 @@ do
 		then
 			name=${file#*-}
 			echo "$name"
+		else
+			echo "$file"
 		fi
 	fi
 done
