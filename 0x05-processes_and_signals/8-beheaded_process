@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Kills 7-highlander (a script with a trap signal command)
+
+pkill -f -SIGKILL 7-highlander
