@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script displays the litening ports:
+#	That only shows the listening sockets
+#	That shows the PID and program to which each port belongs
+
+netstat -l --program
