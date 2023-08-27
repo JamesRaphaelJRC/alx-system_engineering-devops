@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Creates an RSA ket pair with name = school, 4096 bits and passphrase=betty
+ssh-keygen -b 4096 -N betty -f school
