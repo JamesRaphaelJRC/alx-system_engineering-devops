@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Installs nginx and writes a defaullt configuration block to the configuration
 # file
+# add sudo to each command if not a root user!
 
 
 apt-get update
