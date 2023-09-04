@@ -32,9 +32,9 @@ frontend http
 	default_backend webservers
 
 backend webservers
-	balance round-robin
-	server 297332-web-01 54.224.24.109:80 check
-	server 297332-web-02 54.160.116.141:80 check
+	balance roundrobin
+        server 297332-web-01 54.224.24.109:80 check
+        server 297332-web-02 54.160.116.141:80 check
 " >> /etc/haproxy/haproxy.cfg
 
 service haproxy start
