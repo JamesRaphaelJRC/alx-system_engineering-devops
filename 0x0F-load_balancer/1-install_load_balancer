@@ -29,6 +29,12 @@ defaults
 
 frontend http
 	bind *:80
+	mode http
+	stats enable
+	stats uri /haproxy?stats
+	balance roundrobin
+	option httpclose
+	option forwardfor
 	default_backend webservers
 
 backend webservers
