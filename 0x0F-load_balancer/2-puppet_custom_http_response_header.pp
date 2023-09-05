@@ -8,12 +8,17 @@ class { 'nginx::package':
 	ensure => 'installed',
 }
 
-file { '/var/www/html/index.html':
+file { '/etc/nginx/html':
+	ensure	=> 'directory',
+	mode	=> '777',
+}
+
+file { '/etc/nginx/html/index.html':
 	ensure => 'present',
 	content => "Hello World",
 }
 
-file { '/var/www/html/404.html':
+file { '/etc/nginx/html/404.html':
 	ensure => 'present',
 	content => "Ceci n'est pas une page\n",
 }
