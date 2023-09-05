@@ -14,18 +14,18 @@ file { '/etc/nginx/html':
 }
 
 file { '/etc/nginx/html/index.html':
-	ensure => 'present',
-	content => "Hello World",
+	ensure	=> 'present',
+	content	=> "Hello World",
 }
 
 file { '/etc/nginx/html/404.html':
-	ensure => 'present',
-	content => "Ceci n'est pas une page\n",
+	ensure	=> 'present',
+	content	=> "Ceci n'est pas une page\n",
 }
 
 file { '/etc/nginx/sites-available/default':
-	ensure => 'present',
-	content => "
+	ensure	=> 'present',
+	content	=> "
 server {
 	listen 80;
 	listen [::]:80 default_server;
@@ -47,11 +47,11 @@ server {
 }
 
 nginx::resource::vhost { 'default':
-	ensure => 'present',
+	ensure	=> 'present',
 }
 
 service { 'nginx':
-	ensure 	=> 'running',
-	enable	=> true,
-	suscribe => File['/etc/nginx/sites-available/default'],
+	ensure	 => 'running',
+	enable	 => true,
+	subscribe => File['/etc/nginx/sites-available/default'],
 }
