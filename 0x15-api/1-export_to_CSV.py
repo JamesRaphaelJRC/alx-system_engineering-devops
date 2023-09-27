@@ -13,9 +13,9 @@ if __name__ == '__main__':
                             .format(id)).json()
     tasks = requests.get('https://jsonplaceholder.typicode.com/todos',
                          params={'userId': id}).json()
-    name = employee.get('name')
+    user_name = employee.get('username')
 
     with open('{}.csv'.format(id), 'w', newline="") as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        [writer.writerow([id, name, task.get('completed'), task.get('title')])
-         for task in tasks]
+        [writer.writerow([id, user_name, task.get('completed'),
+                          task.get('title')]) for task in tasks]
