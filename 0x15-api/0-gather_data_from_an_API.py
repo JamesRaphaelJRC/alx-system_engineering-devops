@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''Returns information about an employee TODO list progress'''
+'''Returns information about an employee Todo list progress'''
+import json
 import requests
 import sys
-import json
 
 
 if __name__ == '__main__':
@@ -18,5 +18,5 @@ if __name__ == '__main__':
     print("Employee {} is done with tasks({}/{})".format(name, completed_tasks,
                                                          total_tasks))
     for task in tasks:
-        if task['completed'] is True:
-            print("\t{}".format(task['title']))
+        if task.get('completed'):
+            print("\t{}".format(task.get('title')))
