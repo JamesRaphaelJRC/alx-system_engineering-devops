@@ -19,4 +19,4 @@ if __name__ == '__main__':
                                                          total_tasks))
     for task in tasks:
         if task.get('completed'):
-            print("\t{}".format(task.get('title')))
+            print("\t {}".format(task.get('title')))
