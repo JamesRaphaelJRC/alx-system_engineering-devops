@@ -17,7 +17,4 @@ if __name__ == '__main__':
 
     with open('{}.csv'.format(id), 'w', newline="") as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        for task in tasks:
-            status = task.get('completed')
-            title = task.get('title')
-            writer.writerow([id, name, status, title])
+        [writer.writerow([id, name, task.get('completed'), task.get('title')]) for task in tasks]
