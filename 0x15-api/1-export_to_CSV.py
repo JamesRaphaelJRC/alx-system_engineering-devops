@@ -11,8 +11,8 @@ if __name__ == '__main__':
     id = sys.argv[1]
     employee = requests.get('https://jsonplaceholder.typicode.com/users/{}'
                             .format(id)).json()
-    tasks = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
-                         .format(id)).json()
+    tasks = requests.get('https://jsonplaceholder.typicode.com/todos',
+                         params={'userId': id}).json()
     name = employee.get('name')
 
     with open('{}.csv'.format(id), 'w', newline="") as csvfile:
