@@ -16,7 +16,6 @@ def top_ten(subreddit):
         i = 0
         for i in range(10):
             # prints the data in data->children(i.e. response)->data->title
-            # for each 'children' up to the 10th
             print(response[i]['data'].get('title'))
     else:
         print('None')
