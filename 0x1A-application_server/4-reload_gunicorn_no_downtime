@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Gracefully reloads Gunicorn. awk '{ print $2 }' print the 2nd column of each
+# line which contains the PIDs of the running gunicorn processes filtered by
+# grep. xargs reads the the process IDs obtained by awk and KILL sends the
+# SIGHUP signal to each specified processes prompting them to reload its
+# config/restart
+
+ps aux | grep gunicorn | awk '{ print $2 }' | xargs kill -HUP
